@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="515.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.task1.controllers.MainController">
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+        <center>
+            <Canvas fx:id="canvas" height="421.0" width="684.0" BorderPane.alignment="CENTER" />
+        </center>
+        <bottom>
+            <HBox prefHeight="94.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+                <children>
+                    <VBox prefHeight="94.0" prefWidth="130.0">
+                        <children>
+                            <Button fx:id="selectRectangleButton" prefHeight="36.0" prefWidth="144.0" text="Квадрат">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="selectCircleButton" layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="144.0" text="Круг">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Button>
+                        </children>
+                    </VBox>
+                    <VBox prefHeight="94.0" prefWidth="130.0">
+                        <children>
+                            <Button fx:id="selectRoundRectangleButton" prefHeight="36.0" prefWidth="144.0" text="Скругленный прямоугольник">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="selectTriangleButton" layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="144.0" text="Треугольник">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Button>
+                        </children>
+                    </VBox>
+                    <VBox layoutX="149.0" layoutY="13.0" prefHeight="94.0" prefWidth="206.0">
+                        <children>
+                            <HBox prefHeight="26.0" prefWidth="206.0">
+                                <children>
+                                    <Label prefHeight="22.0" prefWidth="62.0" text="Заливка">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <ColorPicker fx:id="fillColorPicker" prefHeight="35.0" prefWidth="126.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <HBox prefHeight="26.0" prefWidth="206.0">
+                                <children>
+                                    <Label prefHeight="22.0" prefWidth="62.0" text="Контур">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <ColorPicker fx:id="strokeColorPicker" prefHeight="35.0" prefWidth="126.0" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                        </children>
+                    </VBox>
+                    <VBox layoutX="13.0" layoutY="13.0" prefHeight="94.0" prefWidth="225.0">
+                        <children>
+                            <HBox prefHeight="26.0" prefWidth="242.0">
+                                <children>
+                                    <Label prefHeight="22.0" prefWidth="62.0" text="Высота">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="heightTextField" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                            <HBox layoutX="10.0" layoutY="56.0" prefHeight="26.0" prefWidth="242.0">
+                                <children>
+                                    <Label prefHeight="22.0" prefWidth="62.0" text="Ширина">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                        <HBox.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="widthTextField" />
+                                </children>
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </bottom>
+        <top>
+            <Label fx:id="titleShapeLabel" text="Фигура: " BorderPane.alignment="CENTER">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+        </top>
+    </BorderPane>
+</VBox>
