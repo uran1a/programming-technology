@@ -1,0 +1,24 @@
+package tasks.task2.models;
+
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+
+public class Triangle extends Shape{
+
+    public Triangle(){
+        super("Треугольник", Color.BLUE, Color.PINK, 50, 50);
+    }
+    @Override
+    public void draw(GraphicsContext gc) {
+        gc.setLineWidth(5.0);
+        gc.setStroke(this.getStrokeColor());
+        gc.strokePolygon(new double[] {getX(), getX() - (getWidth()/2), getX() + (getWidth()/2)}, new double[] {getY() - (getHeight()/2), getY() + (getHeight()/2), getY() + (getHeight()/2)}, 3);
+        gc.setFill(this.getFillColor());
+        gc.fillPolygon(new double[] {getX(), getX() - (getWidth()/2), getX() + (getWidth()/2)}, new double[] {getY() - (getHeight()/2), getY() + (getHeight()/2), getY() + (getHeight()/2)}, 3);
+    }
+
+    @Override
+    public String discriptor() {
+        return String.format("Треугольник %s %s %f %f %f %f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
+    }
+}
