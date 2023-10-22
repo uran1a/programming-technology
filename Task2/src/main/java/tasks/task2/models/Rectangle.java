@@ -3,6 +3,8 @@ package tasks.task2.models;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.Locale;
+
 public class Rectangle extends Shape {
     public Rectangle(){
         super("Прямоугольник", Color.YELLOW, Color.OLIVE, 50, 75);
@@ -18,6 +20,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String discriptor() {
-        return String.format("Прямоугольник %s %s %f %f %f %f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
+        return String.format(Locale.US, "Прямоугольник %s %s %.1f %.1f %.1f %.1f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
     }
 }

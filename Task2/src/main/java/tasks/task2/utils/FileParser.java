@@ -19,10 +19,10 @@ public class FileParser {
                     var shape = new ShapeFactory().createShape(params[0]);
                     shape.setStrokeColor(parseToColor(params[1]));
                     shape.setFillColor(parseToColor(params[2]));
-                    shape.setHeight(Integer.parseInt(params[3]));
-                    shape.setWidth(Integer.parseInt(params[4]));
-                    shape.setX(Integer.parseInt(params[5]));
-                    shape.setY(Integer.parseInt(params[6]));
+                    shape.setHeight(Double.parseDouble(params[3]));
+                    shape.setWidth(Double.parseDouble(params[4]));
+                    shape.setX(Double.parseDouble(params[5]));
+                    shape.setY(Double.parseDouble(params[6]));
 
                     shapes.push(shape);
                 }
@@ -50,6 +50,9 @@ public class FileParser {
     }
 
     private static Color parseToColor(String strColor){
+        var color = Color.valueOf(strColor);
+        return color;
+        /*
         var matcher = Pattern.compile(".+\\[r=(\\d{1,3})\\,g=(\\d{1,3}),b=(\\d{1,3})\\]").matcher(strColor);
         if (matcher.matches()) {
             final int r = Integer.parseInt(matcher.group(1));
@@ -58,6 +61,7 @@ public class FileParser {
             return Color.rgb(r, g, b);
         }
         return null;
+        */
     }
 }
 

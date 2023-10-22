@@ -2,6 +2,9 @@ package tasks.task2.models;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+
+import java.util.Locale;
+
 public class Circle extends Shape {
     public Circle(){
         super("Круг", Color.RED, Color.INDIGO, 75, 75);
@@ -17,6 +20,6 @@ public class Circle extends Shape {
 
     @Override
     public String discriptor() {
-        return String.format("Круг %s %s %f %f %f %f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
+        return String.format(Locale.US, "Круг %s %s %.1f %.1f %.1f %.1f", getStrokeColor(), getFillColor(), getHeight(), getWidth(), getX(), getY());
     }
 }

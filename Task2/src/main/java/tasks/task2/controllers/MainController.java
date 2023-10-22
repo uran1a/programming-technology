@@ -39,13 +39,17 @@ public class MainController implements Initializable {
     @FXML
     private Button saveShapesButton;
 
-    private final Deque<Shape> shapes = new ArrayDeque<>();
+    private Deque<Shape> shapes;
     GraphicsContext gc;
     private FileChooser fileChooser;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        shapes = new ArrayDeque<>();
+
         gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0, 0, canvas.maxWidth(Double.MAX_VALUE), canvas.maxHeight(Double.MAX_VALUE));
 
         fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File("C:\\Users\\voron\\Desktop"));
@@ -70,9 +74,11 @@ public class MainController implements Initializable {
     }
     private void openFileHandler(ActionEvent actionEvent) {
         var selectedFile = fileChooser.showOpenDialog(canvas.getScene().getWindow());
-        Deque<Shape> shapes = FileParser.parseToShapes(selectedFile);
-        if(shapes.size() != 0)
-            drawShapesOnCleanCanvas(shapes);
+        Deque<Shape> fileShapes = FileParser.parseToShapes(selectedFile);
+        if(fileShapes.size() != 0){
+            this.shapes = fileShapes;
+            drawShapesOnCleanCanvas();
+        }
         else
             displayWarningMessage("Файл пустой или с некоррестными данными");
     }
@@ -81,18 +87,18 @@ public class MainController implements Initializable {
         if(!shapes.isEmpty()){
             shapes.pop();
 
-            drawShapesOnCleanCanvas(shapes);
+            drawShapesOnCleanCanvas();
         }
         else{
             displayWarningMessage("На холсте нет фигур");
         }
     }
 
-    private void drawShapesOnCleanCanvas(Deque<Shape> shapes){
+    private void drawShapesOnCleanCanvas(){
         gc.setFill(Color.WHITE);
         gc.fillRect(0, 0, canvas.maxWidth(Double.MAX_VALUE), canvas.maxHeight(Double.MAX_VALUE));
 
-        Iterator<Shape> descIter = shapes.descendingIterator();
+        Iterator<Shape> descIter = this.shapes.descendingIterator();
         while (descIter.hasNext()){
             descIter.next().draw(gc);
         }
