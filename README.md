@@ -10,6 +10,6 @@
 # Задания про "Создатель мемов"
 ### Задание №4,5 | Итератор, Строитель - https://github.com/uran1a/programming-technology-creator-mems
 
-# Задания про "Создатель мемов"
+# Задания про "Наблюдатель"
 ### Задание №7 | Наблюдатель - https://github.com/uran1a/programming-technology-observer/tree/master
 
