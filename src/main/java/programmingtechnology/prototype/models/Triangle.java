@@ -4,16 +4,17 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Triangle extends Shape {
-    private final double HEIGHT = 25;
-    private final double WIDTH = 75;
-    public Triangle(){
-        type = "Треугольник";
+    public Triangle(Color color, double height, double width){
+        this.type = "Треугольник";
+        this.color = color;
+        this.height = height;
+        this.width = width;
     }
-
     @Override
     public void draw(GraphicsContext gc, Double pointX, Double pointY) {
-        gc.setFill(Color.BLUE);
-        gc.fillPolygon(new double[] {pointX, pointX - (WIDTH/2), pointX + (WIDTH/2)}, new double[] {pointY - (HEIGHT/2), pointY + (HEIGHT/2), pointY + (HEIGHT/2)}, 3);
+        gc.setFill(this.color);
+        gc.fillPolygon(new double[] {pointX, pointX - (this.width/2), pointX + (this.width/2)},
+                new double[] {pointY - (this.height/2), pointY + (this.height/2), pointY + (this.height/2)}, 3);
     }
     @Override
     public String toString(){

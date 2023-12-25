@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import programmingtechnology.prototype.models.*;
 
 import java.net.URL;
@@ -30,7 +31,8 @@ public class MainController implements Initializable {
     private ObservableList<Shape> items;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        items = FXCollections.observableArrayList(new Rectangle(), new Square(), new Triangle(), new Circle());
+        items = FXCollections.observableArrayList(new Rectangle(Color.RED, 50, 75), new Square(Color.ORANGE, 50, 50),
+                new Triangle(Color.BLUE, 50, 75), new Circle(Color.GREEN, 50, 50));
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         listView.setItems(items);
 
