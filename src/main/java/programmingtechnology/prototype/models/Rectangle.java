@@ -4,12 +4,15 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Rectangle extends Shape {
-    private final double HEIGHT = 25;
-    private final double WIDTH = 75;
+    private double HEIGHT;
+    private double WIDTH;// не константы!
     public Rectangle(){
-        type = "Прямоугольник";
+        HEIGHT = 25;
+        WIDTH = 75;
     }
+// добавить второй конструктор c double HEIGHT и double WIDTH 
 
+    
     @Override
     public void draw(GraphicsContext gc, Double pointX, Double pointY) {
         gc.setFill(Color.RED);
