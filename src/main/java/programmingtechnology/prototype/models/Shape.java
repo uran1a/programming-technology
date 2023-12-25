@@ -3,7 +3,8 @@ package programmingtechnology.prototype.models;
 import javafx.scene.canvas.GraphicsContext;
 
 public abstract class Shape implements Cloneable{
-    protected String type;
+
+    // добавить поля для цвета, высоты и ширины вписываемой фигуры
     public abstract void draw(GraphicsContext gr, Double pointX, Double pointY);
     public Object clone(){
         Object clone = null;
@@ -15,8 +16,5 @@ public abstract class Shape implements Cloneable{
         }
         return clone;
     }
-    @Override
-    public String toString(){
-        return super.toString();
-    }
+    // в подкласса реализация разная, а абстрактный метод Object и так есть
 }
