@@ -4,11 +4,9 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public abstract class Shape implements Cloneable{
-    protected String type;
-    protected Color color;
-    protected double height;
-    protected double width;
 
+    // добавить поля для цвета, высоты и ширины вписываемой фигуры
+  
     public abstract void draw(GraphicsContext gr, Double pointX, Double pointY);
     public Object clone(){
         Object clone = null;
@@ -20,4 +18,6 @@ public abstract class Shape implements Cloneable{
         }
         return clone;
     }
+
+    // в подкласса реализация разная, а абстрактный метод Object и так есть
 }
