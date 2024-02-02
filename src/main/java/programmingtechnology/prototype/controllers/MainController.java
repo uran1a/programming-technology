@@ -31,7 +31,7 @@ public class MainController implements Initializable {
     private ObservableList<Shape> items;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        items = FXCollections.observableArrayList(new Rectangle(Color.RED, 50, 75), new Square(Color.ORANGE, 50, 50),
+        items = FXCollections.observableArrayList(new Rectangle(), new Square(Color.ORANGE, 50, 50),
                 new Triangle(Color.BLUE, 50, 75), new Circle(Color.GREEN, 50, 50));
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         listView.setItems(items);

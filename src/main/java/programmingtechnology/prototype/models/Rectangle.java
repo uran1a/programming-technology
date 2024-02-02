@@ -4,12 +4,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Rectangle extends Shape {
-  
+    public Rectangle(){
+        super("Прямоугольник", Color.RED, 75, 75);
+    }
     public Rectangle(Color color, double height, double width){
         super("Прямоугольник", color, height, width);
     }
-    // добавить второй конструктор c double HEIGHT и double WIDTH 
-    
     @Override
     public void draw(GraphicsContext gc, Double pointX, Double pointY) {
         gc.setFill(this.color);
