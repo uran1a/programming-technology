@@ -4,18 +4,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Circle extends Shape {
-    private final double RADIUS = 25;
-    public Circle(){
-        type = "Круг";
+    public Circle(Color color, double height, double width){
+        super("Круг", color, height, width);
     }
 
     @Override
     public void draw(GraphicsContext gc, Double pointX, Double pointY) {
-        gc.setFill(Color.PINK);
-        gc.fillOval(pointX - (RADIUS/2), pointY - (RADIUS/2), RADIUS, RADIUS);
-    }
-    @Override
-    public String toString(){
-        return "Circle";
+        gc.setFill(this.color);
+        gc.fillOval(pointX - (this.width/2), pointY - (this.height/2), this.width, this.height);
     }
 }
