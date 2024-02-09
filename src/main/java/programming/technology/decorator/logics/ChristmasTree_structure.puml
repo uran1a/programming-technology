@@ -1,0 +1,221 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "programming.technology.decorator.logics.ChristmasTree",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1679325940 { 
+   	label=technology
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_144100903 { 
+   	label=decorator
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   ChristmasTree744309003[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)ChristmasTree</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ draw(pane: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+
+ChristmasTreeImpl744309003[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ChristmasTreeImpl</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ draw(pane: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Girland715772790[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Girland</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   circles: Circle[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ draw(paneLight: Pane)</TD></TR>
+<TR><TD ALIGN="LEFT" >- drawWithGirland(paneLight: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+MainController1573364279[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)MainController</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   addAll: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   addGirland: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   addPresents: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   addStar: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   deleteAll: Button [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   pane: Pane [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   tree: ChristmasTree [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- addAllHandler(event: MouseEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addGarlandHandler(event: MouseEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addPresentsHandler(event: MouseEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >- addStarHandler(event: MouseEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >- deleteAllHandler(event: MouseEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ initialize(url: URL, resourceBundle: ResourceBundle)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Presents715772790[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Presents</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   colors: ArrayList&lt;Color&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   random: Random [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   shapes: ArrayList&lt;Shape&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >- createPresent(posX: int, posY: int, size: int): Collection&lt;Shape&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ draw(pane: Pane)</TD></TR>
+<TR><TD ALIGN="LEFT" >- drawPresents(panePresent: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Star715772790[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Star</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ draw(paneStar: Pane)</TD></TR>
+<TR><TD ALIGN="LEFT" >- drawStar(paneStar: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TreeDecorator744309003[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TreeDecorator</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   tree: ChristmasTree [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ draw(pane: Pane)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+ChristmasTree744309003 -> ChristmasTreeImpl744309003[arrowhead=none, arrowtail=empty, dir=both];
+ChristmasTree744309003 -> TreeDecorator744309003[arrowhead=none, arrowtail=empty, dir=both];
+MainController1573364279 -> ChristmasTree744309003[label="tree
+[0..1]"];
+TreeDecorator744309003 -> ChristmasTree744309003[label="tree
+[0..1]"];
+TreeDecorator744309003 -> Girland715772790[arrowhead=none, arrowtail=empty, dir=both];
+TreeDecorator744309003 -> Presents715772790[arrowhead=none, arrowtail=empty, dir=both];
+TreeDecorator744309003 -> Star715772790[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
