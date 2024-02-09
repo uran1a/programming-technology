@@ -7,10 +7,12 @@
 ### Задание №1 | Абстрактный класс - https://github.com/uran1a/programming-technology/tree/task1/Task1
 ### Задание №2 | Фабричный метод - https://github.com/uran1a/programming-technology/tree/task2/Task2
 ### Задание №6 | Прототип - https://github.com/uran1a/programming-technology/tree/task6
+### Задание №8 | Декоратор - https://github.com/uran1a/programming-technology/tree/task8
 
 # Задания про "Создатель мемов"
 ### Задание №4,5 | Итератор, Строитель - https://github.com/uran1a/programming-technology-creator-mems
 
 # Задания про "Наблюдатель"
 ### Задание №7 | Наблюдатель - https://github.com/uran1a/programming-technology-observer/tree/master
+
 
