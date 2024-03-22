@@ -16,5 +16,5 @@
 ### Задание №7 | Наблюдатель - https://github.com/uran1a/programming-technology-observer/tree/master
 
 # Задания про "DAO"
-### Задание №8.1 | DAO - [https://github.com/uran1a/programming-technology-observer/tree/master](https://github.com/uran1a/programming-technology-dao)https://github.com/uran1a/programming-technology-dao
+### Задание №8.1 | DAO - [https://github.com/uran1a/programming-technology-observer/tree/master](https://github.com/uran1a/programming-technology-dao)
 
