@@ -18,3 +18,5 @@
 # Задания про "DAO"
 ### Задание №8.1 | DAO - [https://github.com/uran1a/programming-technology-observer/tree/master](https://github.com/uran1a/programming-technology-dao)
 
+# Задания про "Тесты"
+### Задания Тесты | Tests - https://github.com/uran1a/programming-technology/tree/tests
