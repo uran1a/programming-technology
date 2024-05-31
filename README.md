@@ -20,3 +20,6 @@
 
 # Задания про "Тесты"
 ### Задания Тесты | Tests - https://github.com/uran1a/programming-technology/tree/tests
+
+# Задания про "Компоновщик"
+### Задания №13 | Компоновщик - [https://github.com/uran1a/programming-technology/tree/tests](https://github.com/uran1a/programming-technology/tree/task13)
